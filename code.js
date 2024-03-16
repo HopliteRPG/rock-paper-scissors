@@ -1,4 +1,5 @@
 let playerSelection = "RocK".toLowerCase();
+let outcome = "";
 
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random() * 3);
@@ -20,38 +21,58 @@ function playRound(playerSelection,computerSelection){
 
    if(playerSelection === "rock"){
         if(computerSelection === "rock"){
-                console.log("Its a Tie! Both Players used Rock");
+         return   outcome = "Its a Tie! Both Players used Rock";
             }
         else if(computerSelection === "paper"){
-                console.log("You Lose! Paper beats Rock");
+            return   outcome = "You Lose! Paper beats Rock";
             }
         else if (computerSelection === "scissors"){
-                console.log("You Win! Rock beats Scissors");
+            return  outcome = "You Win! Rock beats Scissors";
             }
+            console.log(outcome)
+
    }
    else if(playerSelection === "paper") {
         if(computerSelection === "rock"){
-            console.log("You Win! Paper beats Rock")
+            return outcome = "You Win! Paper beats Rock";
         }
         else if(computerSelection === "paper"){
-            console.log("Its a Tie! Both Players used Paper");
+            return  outcome = "Its a Tie! Both Players used Paper";
         }
         else if (computerSelection === "scissors"){
-            console.log("You Lose! Scissors beats Paper");
-        }      
+            return outcome = "You Lose! Scissors beats Paper";
+        }     
+        console.log(outcome);
+        
    }
    else if(playerSelection === "scissors"){
         if(computerSelection === "rock"){
-            console.log("You Lose! Rock beats Scissors")
+            return   outcome = "You Lose! Rock beats Scissors";
             }
         else if(computerSelection === "paper"){
-            console.log("You Win! Scissors beats Paper");
+            return outcome = "You Win! Scissors beats Paper";
         }
         else if (computerSelection === "scissors"){
-            console.log("Its a Tie! Both Players used Scissors");
+            return  outcome ="Its a Tie! Both Players used Scissors";
         }   
-   }
+        console.log(outcome);
+    }
 }
 
 
-playRound(playerSelection,getComputerChoice());
+function playGame(){
+    playRound(playerSelection,getComputerChoice());
+    console.log(outcome)
+    playRound(playerSelection,getComputerChoice());
+    console.log(outcome)
+    playRound(playerSelection,getComputerChoice());
+    console.log(outcome)
+    playRound(playerSelection,getComputerChoice());
+    console.log(outcome)
+    playRound(playerSelection,getComputerChoice());
+    console.log(outcome)
+}
+
+
+playGame()
+
