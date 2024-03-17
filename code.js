@@ -1,4 +1,4 @@
-let playerSelection = "RocK".toLowerCase();
+let playerSelection = "".toLowerCase();
 let outcome = "";
 
 function getComputerChoice() {
@@ -61,18 +61,26 @@ function playRound(playerSelection,computerSelection){
 
 
 function playGame(){
+    playerSelection = prompt("Enter Rock Paper or Scissors");
     playRound(playerSelection,getComputerChoice());
     console.log(outcome)
+
+    playerSelection = prompt("Enter Rock Paper or Scissors");
     playRound(playerSelection,getComputerChoice());
     console.log(outcome)
+    
+    playerSelection = prompt("Enter Rock Paper or Scissors");
     playRound(playerSelection,getComputerChoice());
     console.log(outcome)
+
+    playerSelection = prompt("Enter Rock Paper or Scissors");
     playRound(playerSelection,getComputerChoice());
     console.log(outcome)
+  
+    playerSelection = prompt("Enter Rock Paper or Scissors");
     playRound(playerSelection,getComputerChoice());
     console.log(outcome)
 }
 
 
 playGame()
-
